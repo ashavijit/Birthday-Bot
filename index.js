@@ -3,6 +3,8 @@ const mongoose=require('mongoose');
 require('dotenv').config();
 const cron=require('node-cron');
 const morgan=require('morgan');
+const routes=require('./src/routes/index');
+const {cronService}=require('./src/services/cron.service');
 const app=express();
 
 const PORT=process.env.PORT || 3000;
@@ -12,6 +14,7 @@ app.use(morgan('dev'));
 app.use ('/',(req,res)=>{
     res.status(200).send('<h2 align="center">Welcome to the Birthday reminder bot</h2>');
 });
+app.use('/api',routes);
 
 
 mongoose.connect(process.env.MONGO_URI,{
