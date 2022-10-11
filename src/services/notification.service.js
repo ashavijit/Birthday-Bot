@@ -6,7 +6,7 @@ module.exports = {
         try {
             const randomQuote = Quote.getRandomQuote();
             const subject = name === 'Test User' ? 'No Birthday for Today' : `Birthday Reminder: ${name}`;
-            const body = name === 'Test User' ? `${randomQuote}` : `Hello Alok, <br /> Send your wishes to <b>${name}</b>. <br /> <br /> -- Your well wisher ♥`;
+            const body = name === 'Test User' ? `${randomQuote}` : `Hello avijit, <br /> Send your wishes to <b>${name}</b>. <br /> <br /> -- Your well wisher ♥`;
             const transporter = nodeMailer.createTransport({
                 service: 'gmail',
                 auth: {
