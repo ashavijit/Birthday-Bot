@@ -16,7 +16,7 @@ module.exports = {
                 
                 });
                 await transporter.sendMail({
-                    from: "botbyavijit@gmail.com",
+                    from: "localhost.port.8080@gmail.com",
                     to: "avijitsen.me@gmail.com",
                     subject: subject,
                     html: body
