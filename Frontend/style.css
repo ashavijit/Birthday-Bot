@@ -1,0 +1,80 @@
+.body{
+    background-color: rgb(237, 231, 231);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+
+}
+button {
+    background-color: rgb(243, 25, 25);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-radius: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+button:hover{
+
+    background-color: rgb(161, 218, 4);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-radius: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+button::before{
+    content: "<";
+    padding-right: 10px;
+}
+
+button ::after{
+    content: ">";
+    padding-left: 10px;
+}
+
+input{
+    background-color: rgb(161, 218, 4);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-radius: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}

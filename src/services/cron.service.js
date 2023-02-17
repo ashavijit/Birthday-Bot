@@ -13,6 +13,7 @@ module.exports = {
                 for (const iterator of friend) {
                     
                     await sendEmail(iterator.name);
+                    console.log(iterator.name, "birthday is today.", todayDate);
                 }
             } else {
                 await sendEmail('Test User');

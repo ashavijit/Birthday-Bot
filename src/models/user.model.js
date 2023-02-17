@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
         required:true
     },
     dob:{
-        type:String,
+        type: String,
         required:true
     } // date of birth format D/M
 });

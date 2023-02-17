@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <form action="http://localhost:3000" method="POST">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="dob" placeholder="Date of Birth">
+        <button type="submit">Submit </button>
+    </form>
+</html>
+
+<script>
+    
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const dob = formData.get('dob');
+        const data = { name, dob };
+        fetch('http://localhost:3000/add', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+    });
+</script>
