@@ -21,7 +21,7 @@
         const name = formData.get('name');
         const dob = formData.get('dob');
         const data = { name, dob };
-        fetch('http://localhost:3000/api/add/', {
+        fetch('http://localhost:3000/api/add', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
