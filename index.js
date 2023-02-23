@@ -12,12 +12,11 @@ const PORT=process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(morgan('dev'));
-app.use ('/',(req,res)=>{
+app.get ('/',(req,res)=>{
     res.status(200).send('<h2 align="center">Welcome to the Birthday reminder bot</h2>');
-});
-app.use('/api',routes,(req,res)=>{
-    res.status(200).send('<h2 align="center">Welcome to the Add</h2>');
-} );
+}); 
+// app.use('/api',routes);
+app.use('/api',routes);
 
 app.use(cors());
 app.use(express.json());

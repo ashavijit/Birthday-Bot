@@ -5,7 +5,7 @@
 </head>
 <body>
     <link rel="stylesheet" href="style.css">
-    <form action="http://localhost:3000" method="POST">
+    <form action="http://localhost:3000/api/add" method="POST">
         <input type="text" name="name" placeholder="Name">
         <input type="text" name="dob" placeholder="Date of Birth">
         <button type="submit">Submit </button>
@@ -21,7 +21,7 @@
         const name = formData.get('name');
         const dob = formData.get('dob');
         const data = { name, dob };
-        fetch('http://localhost:3000/add', {
+        fetch('http://localhost:3000/api/add/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
